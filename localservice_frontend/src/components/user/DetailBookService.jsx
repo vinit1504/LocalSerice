@@ -33,7 +33,7 @@ const DetailBookService = () => {
 
         try {
             const res = await axios.post(
-                "http://localhost:4000/bookings/booking",
+                "http://localhost:9000/bookings/booking",
                 objectToSbmit
             );
             console.log(res)
@@ -68,7 +68,7 @@ const DetailBookService = () => {
     const submitHandler = async () => {
         try {
             const res = await axios.get(
-                "http://localhost:4000/services/services/" + id
+                "http://localhost:9000/services/services/" + id
             );
             console.log(res.data.data);
             setservice(res.data.data);

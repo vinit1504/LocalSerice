@@ -6,7 +6,6 @@ import {
   CategoryScale,
   Chart,
   LinearScale,
-  LineElement,
 } from "chart.js";
 import axios from "axios";
 import { Bar } from 'react-chartjs-2';
@@ -26,7 +25,7 @@ const UserDashboard = () => {
 
   const getPendingBooking = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/bookings/pendingStatus/" + id)
+      const res = await axios.get("http://localhost:9000/bookings/pendingStatus/" + id)
       console.log(res.data.data);
       setbook(res.data.data);
     } catch (error) {
@@ -36,7 +35,7 @@ const UserDashboard = () => {
 
   const getDoneBooking = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/bookings/doneStatus/" + id);
+      const res = await axios.get("http://localhost:9000/bookings/doneStatus/" + id);
       console.log(res.data.data);
       setdoneBook(res.data.data);
     } catch (error) {
@@ -46,7 +45,7 @@ const UserDashboard = () => {
 
   const getAllservice = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/services/services");
+      const res = await axios.get("http://localhost:9000/services/services");
       console.log("service", res.data.data);
       console.log(res.data.data.length)
       if (res.data.data && res.data.data.length > 0) {

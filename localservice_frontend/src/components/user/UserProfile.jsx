@@ -10,7 +10,7 @@ const UserProfile = () => {
     const getuser = async () => {
 
         const id = localStorage.getItem("id")
-        const res = await axios.get("http://localhost:4000/users/user/" + id)
+        const res = await axios.get("http://localhost:9000/users/user/" + id)
         console.log(res.data.data)
         setuser(res.data.data)
     }

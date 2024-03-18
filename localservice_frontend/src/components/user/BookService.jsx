@@ -15,7 +15,7 @@ const BookService = () => {
 
         try {
 
-            const res = await axios.get("http://localhost:4000/services/filterservice",
+            const res = await axios.get("http://localhost:9000/services/filterservice",
                 {
                     params: {
                         servicename: e.target.value,
@@ -33,7 +33,7 @@ const BookService = () => {
 
         try {
 
-            const res = await axios.get("http://localhost:4000/services/services")
+            const res = await axios.get("http://localhost:9000/services/services")
             // console.log(res);
             // console.log(res.data);
             // console.log(res.data.message);
@@ -67,7 +67,7 @@ const BookService = () => {
     //     }
     //     try{
 
-    //         const res = await axios.post("http://localhost:4000/bookings/booking",objectToSubmit)
+    //         const res = await axios.post("http://localhost:9000/bookings/booking",objectToSubmit)
     //         console.log(res.data)
 
     //         navigate("/user/paymentbooking")

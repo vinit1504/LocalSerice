@@ -18,7 +18,7 @@ const UpdateService = () => {
 
         try {
 
-            const res = await axios.put("http://localhost:4000/services/services/" + id, data)
+            const res = await axios.put("http://localhost:9000/services/services/" + id, data)
             console.log(res.data)
 
             if (res.status === 200) {
@@ -52,21 +52,21 @@ const UpdateService = () => {
 
 
     const loadCategories = async () => {
-        const res = await axios.get("http://localhost:4000/categories/category");
+        const res = await axios.get("http://localhost:9000/categories/category");
         // console.log(res.data.data);
         setcategories(res.data.data);
     };
 
 
     const loadSubCategories = async () => {
-        const res = await axios.get("http://localhost:4000/Scategories/Scategory");
+        const res = await axios.get("http://localhost:9000/Scategories/Scategory");
         // console.log(res.data.data);
         setSubcategories(res.data.data);
     };
 
     const loadTypes = async () => {
 
-        const res = await axios.get("http://localhost:4000/types/type")
+        const res = await axios.get("http://localhost:9000/types/type")
         // console.log(res.data.data)
         setTypes(res.data.data)
     }
@@ -74,7 +74,7 @@ const UpdateService = () => {
     const { register, handleSubmit } = useForm({
 
         defaultValues: async () => {
-            const res = await axios.get("http://localhost:4000/services/services/" + id)
+            const res = await axios.get("http://localhost:9000/services/services/" + id)
 
             return {
                 servicename:res.data.data.servicename,

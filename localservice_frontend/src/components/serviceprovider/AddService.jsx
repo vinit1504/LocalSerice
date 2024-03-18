@@ -30,7 +30,7 @@ const AddService = () => {
 
       if (id !== undefined) {
 
-        const res = await axios.post("http://localhost:4000/services/services", dataObj);
+        const res = await axios.post("http://localhost:9000/services/services", dataObj);
         console.log(res.data.data)
         console.log(data);
         toast.success('🦄 Service added successfully...', {
@@ -75,21 +75,21 @@ const AddService = () => {
 
 
   const loadCategories = async () => {
-    const res = await axios.get("http://localhost:4000/categories/category");
+    const res = await axios.get("http://localhost:9000/categories/category");
     // console.log(res.data.data);
     setcategories(res.data.data);
   };
 
 
   const loadSubCategories = async () => {
-    const res = await axios.get("http://localhost:4000/Scategories/Scategory");
+    const res = await axios.get("http://localhost:9000/Scategories/Scategory");
     // console.log(res.data.data);
     setSubcategories(res.data.data);
   };
 
   const loadTypes = async () => {
 
-    const res = await axios.get("http://localhost:4000/types/type")
+    const res = await axios.get("http://localhost:9000/types/type")
     // console.log(res.data.data)
     setTypes(res.data.data)
   }

@@ -14,7 +14,7 @@ const ServiceList = () => {
 
             if (id !== undefined || id !== null) {
 
-                const res = await axios.get("http://localhost:4000/services/services/provider/" + id)
+                const res = await axios.get("http://localhost:9000/services/services/provider/" + id)
                 console.log(res.data.data)
                 setservices(res.data.data)
             }
@@ -29,7 +29,7 @@ const ServiceList = () => {
 
         try {
 
-            const res = await axios.get("http://localhost:4000/services/filterservice",
+            const res = await axios.get("http://localhost:9000/services/filterservice",
                 {
                     params: {
                         servicename: e.target.value,
@@ -49,7 +49,7 @@ const ServiceList = () => {
 
         try {
 
-            const res = await axios.delete("http://localhost:4000/services/services/" + id)
+            const res = await axios.delete("http://localhost:9000/services/services/" + id)
 
             if (res.status == 200) {
 

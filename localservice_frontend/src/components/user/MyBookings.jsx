@@ -16,7 +16,7 @@ const MyBookings = () => {
 
     try {
 
-      const res = await axios.get("http://localhost:4000/bookings/booking/user/" + id)
+      const res = await axios.get("http://localhost:9000/bookings/booking/user/" + id)
 
       console.log(res.data.data)
       setbookings(res.data.data)
@@ -34,7 +34,7 @@ const MyBookings = () => {
 
     try {
 
-      const res = await axios.delete("http://localhost:4000/bookings/booking/" + id)
+      const res = await axios.delete("http://localhost:9000/bookings/booking/" + id)
       console.log(res)
       console.log(res.data.data)
       if (res.status === 200) {

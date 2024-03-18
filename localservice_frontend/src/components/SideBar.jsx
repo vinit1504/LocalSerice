@@ -13,19 +13,23 @@ const SideBar = () => {
         {
             name: "DASHBOARD",
             link: "/serviceprovider/Dashboard",
+            icon : "dashboard"
         },
         {
             name: "ADD SERVICE",
-            link: "/serviceprovider/addservice",
+            link: "/serviceprovider/addservice", 
+            icon: "add_circle_outline"
 
         },
         {
             name: "MY SERVICES",
             link: "/serviceprovider/servicelist",
+            icon : "import_contacts"
         },
         {
             name: "PROFILE",
-            link: "/serviceprovider/profile"
+            link: "/serviceprovider/profile",
+            icon : "person"
         }
 
 
@@ -36,18 +40,22 @@ const SideBar = () => {
         {
             name: "USER DASHBOARD",
             link: "/user/dashboard",
+            icon: 'dashboard'
         },
         {
             name: "BOOK SERVICE",
             link: "/user/bookservice",
+            icon : 'add_circle_outline'
         },
         {
             name: "MY BOOKINGS",
             link: "/user/mybookings",
+            icon : "import_contacts"
         },
         {
             name: "PROFILE",
-            link: "/user/profile"
+            link: "/user/profile",
+            icon: "person"
         }
         // {
         //     name:"payment Booking",
@@ -99,9 +107,8 @@ const SideBar = () => {
                                         <Link className="nav-link text-white " to={serpro.link}>
 
                                             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                                                <i class="material-icons opacity-10">dashboard</i>
+                                                <i class="material-icons opacity-10">{serpro.icon}</i>
                                             </div>
-
                                             <span class="nav-link-text ms-1">{serpro.name}</span>
 
                                         </Link>
@@ -115,7 +122,7 @@ const SideBar = () => {
                                         <Link className="nav-link text-white " to={user.link}>
 
                                             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                                                <i class="material-icons opacity-10">dashboard</i>
+                                                <i class="material-icons opacity-10">{user.icon}</i>
                                             </div>
 
                                             <span class="nav-link-text ms-1">{user.name}</span>

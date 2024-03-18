@@ -63,7 +63,7 @@ const PaymentBooking = () => {
 
             if (newValue.length === 1 && parseInt(newValue) <= 1) {
                 setExpiryMonth(newValue);
-            } else if (newValue.length == 2 && parseInt(newValue) <= 12) {
+            } else if (newValue.length === 2 && parseInt(newValue) <= 12) {
                 setExpiryMonth(newValue);
             } else {
                 setExpiryDateError('Invalid credentials.');
@@ -101,7 +101,7 @@ const PaymentBooking = () => {
 
         try {
 
-            const res = await axios.put("http://localhost:4000/bookings/bookingstatus/" + id)
+            const res = await axios.put("http://localhost:9000/bookings/bookingstatus/" + id)
             console.log(res.data)
             if(res.status === 200){
                 toast.success('🦄 Booking done successfully..', {
